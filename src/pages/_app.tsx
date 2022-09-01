@@ -9,7 +9,14 @@ import NProgress from 'nprogress';
 // Remove these in package.json as well if removed here.
 import 'bootstrap/dist/css/bootstrap.css';
 import 'nprogress/nprogress.css';
-import 'assets/app.css';
+
+import 'public/lib/flaticon/font/flaticon.css';
+import 'public/lib/animate/animate.min.css';
+import 'public/lib/owlcarousel/assets/owl.carousel.min.css';
+import 'public/lib/lightbox/css/lightbox.min.css';
+import 'public/lib/slick/slick.css';
+import 'public/lib/slick/slick-theme.css';
+import 'public/css/style.css';
 
 NProgress.configure({ showSpinner: false, trickleSpeed: 100 });
 

@@ -24,8 +24,17 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       <Head>
         <title>{route?.fields?.pageTitle?.value || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"
+        ></link>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" ></link>
+        <script async type="text/javascript" src="/public/js/main.js"></script>
       </Head>
-
       {/*
         VisitorIdentification is necessary for Sitecore Analytics to determine if the visitor is a robot.
         If Sitecore XP (with xConnect/xDB) is used, this is required or else analytics will not be collected for the JSS app.
@@ -35,9 +44,8 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       */}
       <VisitorIdentification />
 
-      <Navigation />
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className="container">{route && <Placeholder name="jss-main" rendering={route} />}</div>
+      <div className="wrapper">{route && <Placeholder name="jss-main" rendering={route} />}</div>
     </>
   );
 };

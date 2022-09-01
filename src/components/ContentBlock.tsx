@@ -5,6 +5,8 @@ import {
   withDatasourceCheck,
   ImageField,
   Image,
+  LinkField,
+  Link,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -13,6 +15,7 @@ type ContentBlockProps = ComponentProps & {
     heading: Field<string>;
     content: Field<string>;
     Image: ImageField;
+    Icon: LinkField;
   };
 };
 
@@ -27,6 +30,7 @@ const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => (
 
     <RichText className="contentDescription" field={fields.content} />
     <Image field={fields.Image.value} alt="About" width={'auto'} height={100} />
+    <Link href={fields.Icon.value.href} field={fields.Icon} />
   </div>
 );
 

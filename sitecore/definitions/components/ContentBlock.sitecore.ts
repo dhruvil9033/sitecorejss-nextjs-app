@@ -15,6 +15,7 @@ export default function ContentBlock(manifest: Manifest): void {
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
       { name: 'content', type: CommonFieldTypes.RichText },
       { name: 'Image', type: CommonFieldTypes.Image },
+      { name: 'Icon', type: CommonFieldTypes.ItemLink },
     ],
   });
 }
