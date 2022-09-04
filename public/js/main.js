@@ -1,4 +1,10 @@
-(function ($) {
+import jquery from 'jquery';
+import $ from 'jquery'
+//window.$ = window.jQuery = jquery;
+//require('jquery-slimscroll');
+//import "loader.js";
+
+$(document).ready(function () {
     "use strict";
     
     // Initiate the wowjs
@@ -133,5 +139,5 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
     
-})(jQuery);
+})(jquery);
 

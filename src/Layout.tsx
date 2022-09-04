@@ -7,6 +7,7 @@ import {
   LayoutServiceData,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import Navigation from 'src/Navigation';
+import '../public/js/main.js';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -33,7 +34,8 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
           rel="stylesheet"
         ></link>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" ></link>
-        <script async type="text/javascript" src="/public/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <jscript />
       </Head>
       {/*
         VisitorIdentification is necessary for Sitecore Analytics to determine if the visitor is a robot.
